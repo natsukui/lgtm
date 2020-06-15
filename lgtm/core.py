@@ -1,11 +1,13 @@
 import click
 
 @click.command()
-def cli():
+@click.option('--message', '-m', default='LGTM', show_default=True, help='画像に載せる文字列')
+@click.argument('keyword')
+def cli(keyword, message):
 	"""
 	LGTM画像生成ツール
 	"""
-	lgtm()
+	lgtm(keyword, message)
 	click.echo('LGTM')
 
 def lgtm():
