@@ -23,8 +23,8 @@ test:
     - restore_cache:
         key: deps-{{ checksum "requirements.lock" }}
     - run:
-      command: |
-        python3-m unittest -v
+        command: |
+          python3-m unittest -v
 
 workflows:
   version: 2
