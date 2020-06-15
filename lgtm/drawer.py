@@ -5,7 +5,7 @@ MAX_RATIO = 0.8
 FONT_MAX_SIZE = 256
 FONT_MIN_SIZE = 24
 
-FONT_NAME = '/Library/Fonts/Arial Bold.ttf'
+FONT_NAME = 'C:\Windows\Fonts\Arial.ttf'
 FONT_COLOR_WHITE = (255, 255, 255, 0)
 
 OUTPUT_NAME = 'output.png'
@@ -27,9 +27,9 @@ def save_with_message(fp, message):
 		h = message_area_height - text_height
 
 		if w > 0 and h > 0:
-			position = ((image_width - text_width) / 2, (mage_height - text_height) / 2)
+			position = ((image_width - text_width) / 2, (image_height - text_height) / 2)
 
-			draw.text(position, message, fill=FONT_COOR_WHITE, font_font)
+			draw.text(position, message, fill=FONT_COLOR_WHITE, font=font)
 			break
 		
 	image.save(OUTPUT_NAME, OUTPUT_FORMAT)

@@ -11,9 +11,7 @@ def cli(keyword, message):
 	LGTM画像生成ツール
 	"""
 	lgtm(keyword, message)
-	click.echo('LGTM')
 
-def lgtm():
+def lgtm(keyword, message):
 	with get_image(keyword) as fp:
 		save_with_message(fp, message)
-		
